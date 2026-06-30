@@ -12,7 +12,9 @@ function Signup() {
     })
 
     const navigate = useNavigate();
+
     const handleChange = (e) => {
+
         const { name, value } = e.target;
         console.log(name, value);
         const copySignupInfo = { ...signupInfo };
@@ -35,7 +37,9 @@ function Signup() {
                 },
                 body: JSON.stringify(signupInfo)
             });
+            
             const result = await response.json();
+
             const { success, message, error } = result;
             if (success) {
                 handleSuccess(message);

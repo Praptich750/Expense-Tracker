@@ -7,6 +7,7 @@ const ProductRouter = require('./Routes/ProductRouter');
 const ExpenseRouter = require('./Routes/ExpenseRouter');
 const ensureAuthenticated = require('./Middlewares/Auth');
 
+
 require('dotenv').config();
 require('./Models/db');
 const PORT = process.env.PORT || 8080;

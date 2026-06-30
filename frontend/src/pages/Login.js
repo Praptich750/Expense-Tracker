@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
@@ -21,14 +22,17 @@ function Login() {
     }
 
     const handleLogin = async (e) => {
+
         e.preventDefault();
         const { email, password } = loginInfo;
         if (!email || !password) {
             return handleError('email and password are required')
         }
+
         try {
             const url = `${APIUrl}/auth/login`;
             const response = await fetch(url, {
+
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

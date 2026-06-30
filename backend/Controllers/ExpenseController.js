@@ -29,7 +29,7 @@ const fetchExpenses = async(req, res)=>{
    const body = req.body;
     const {_id} = req.user;
     try {
-        const userData = await UserModel.findByIdAndUpdate(_id).select('expenses');
+        const userData = await UserModel.findById(_id).select('expenses');
         return res.status(200).json({
             message:"Fetched expense successfully",
             success: true,
