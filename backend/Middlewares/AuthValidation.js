@@ -24,6 +24,7 @@ const loginValidation = (req, res, next) => {
             .json({ message: "Bad request", error })
     }
     next();
+    
 }
 module.exports = {
     signupValidation,
